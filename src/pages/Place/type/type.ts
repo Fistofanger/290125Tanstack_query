@@ -9,3 +9,10 @@ export interface IPlace {
 export type PlaceId = IPlace['id'];
 
 export type PlaceWithoutId = Omit<IPlace, 'id'>;
+
+export interface IPlaceResponse {
+  places?: IPlace[];
+  message: string;
+  place?: IPlace;
+  placeId?: PlaceId;
+}
