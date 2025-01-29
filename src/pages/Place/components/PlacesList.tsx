@@ -10,8 +10,8 @@ type PlacesListProps = {
 const PlacesList = ({ places }: PlacesListProps): JSX.Element => {
   return (
     <div className="PlacesList">
-      {places?.map((place) => (
-        <PlaceCard place={place} />
+      {places.map((place) => (
+        <PlaceCard place={place} key={place.id} />
       ))}
     </div>
   );

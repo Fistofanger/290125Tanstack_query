@@ -12,7 +12,9 @@ const Navbar = (): JSX.Element => {
   return (
     <nav className="Navbar">
       {navItems.map((navItem) => (
-        <NavLink to={navItem.href}>{navItem.label}</NavLink>
+        <NavLink to={navItem.href} key={navItem.href}>
+          {navItem.label}
+        </NavLink>
       ))}
     </nav>
   );
